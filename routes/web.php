@@ -16,11 +16,19 @@ Route::get('/', function () {
 
 Route::view('/about', 'about')->name('about');
 
+Route::view('/about', 'about')->name('about');
+
 Route::prefix('admin')->group(function () {
     Route::get('/users', function () {
-        return '/admin/users';
-    });
+        return '/users'; 
+    })->name('users');
 });
+
+// Route::prefix('admin')->group(function () {
+//     Route::get('/users', function () {
+//         return '/admin/users';
+//     });
+// });
 
 //Route::get('/user/profile', function(){})->name('profile');
 
